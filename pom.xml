@@ -11,6 +11,7 @@
       <kotlin.version>1.0.6</kotlin.version>
       <junit.version>4.12</junit.version>
       <shiro.version>1.4.0</shiro.version>
+      <pac4j.version>2.1.0</pac4j.version>
    </properties>
    <dependencies>
       <dependency>
@@ -23,6 +24,13 @@
          <artifactId>kotlin-test-junit</artifactId>
          <version>${kotlin.version}</version>
          <scope>test</scope>
+      </dependency>
+      <dependency>
+         <groupId>mysql</groupId>
+         <artifactId>mysql-connector-java</artifactId>
+         <version>5.1.17</version>
+         <type>jar</type>
+         <scope>compile</scope>
       </dependency>
       <dependency>
          <groupId>junit</groupId>
@@ -44,6 +52,21 @@
          <groupId>org.apache.shiro</groupId>
          <artifactId>shiro-core</artifactId>
          <version>${shiro.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>net.sf.ehcache</groupId>
+         <artifactId>ehcache-core</artifactId>
+         <version>2.6.6</version>
+      </dependency>
+      <dependency>
+         <groupId>org.pac4j</groupId>
+         <artifactId>pac4j-core</artifactId>
+         <version>${pac4j.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.pac4j</groupId>
+         <artifactId>pac4j-jwt</artifactId>
+         <version>${pac4j.version}</version>
       </dependency>
       <dependency>
          <groupId>com.fasterxml.jackson.module</groupId>
@@ -101,7 +124,7 @@
                      </descriptorRefs>
                      <archive>
                         <manifest>
-                           <mainClass>app.MainKt</mainClass>
+                           <mainClass>com.neon.webserver.app.MainKt</mainClass>
                         </manifest>
                      </archive>
                   </configuration>

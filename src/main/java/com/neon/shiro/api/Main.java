@@ -1,4 +1,4 @@
-package backend.api;
+package com.neon.shiro.api;
 
 public class Main {
 

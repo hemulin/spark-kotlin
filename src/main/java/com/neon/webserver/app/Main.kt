@@ -1,5 +1,6 @@
-package app
+package com.neon.webserver.app;
 
+import com.neon.shiro.user.UserManager
 import app.user.UserDao
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import spark.Request
@@ -9,7 +10,19 @@ fun main(args: Array<String>) {
 
     exception(Exception::class.java) { e, req, res -> e.printStackTrace() }
 
+    val userManager = UserManager()
+
     val userDao = UserDao()
+
+    path("/login") {
+        post("") { req, res ->
+            userManager.login(req.qp("email"), req.qp("password"))
+            "ok"
+            // userDao.save(name = req.qp("name"), email = req.qp("email"))
+            // res.status(201)
+            // "ok"
+        }
+    }
 
     path("/users") {
 
@@ -26,6 +39,7 @@ fun main(args: Array<String>) {
         }
 
         post("/create") { req, res ->
+            println(req)
             userDao.save(name = req.qp("name"), email = req.qp("email"))
             res.status(201)
             "ok"

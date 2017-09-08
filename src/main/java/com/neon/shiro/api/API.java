@@ -1,7 +1,7 @@
-package backend.api;
+package com.neon.shiro.api;
 
-import backend.user.LoginRequest;
-import backend.user.UserManager;
+import com.neon.shiro.user.LoginRequest;
+import com.neon.shiro.user.UserManager;
 import static spark.Spark.get;
 import static spark.Spark.port;
 import static spark.Spark.post;

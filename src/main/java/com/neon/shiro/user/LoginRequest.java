@@ -1,5 +1,5 @@
 
-package backend.user;
+package com.neon.shiro.user;
 
 public class LoginRequest {
 

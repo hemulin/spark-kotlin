@@ -15,7 +15,7 @@ CREATE TABLE user_roles(
   id bigint auto_increment,
   user_id varchar(32),
   role_name varchar(100),
-  CONSTRAINT pk_user_roles PRIMARY KEY(id)
+  CONSTRAINT pk_user_roles PRIMARY KEY(id),
   CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES users(id)
 ) charset=utf8 ENGINE=InnoDB;
 CREATE UNIQUE INDEX idx_user_roles ON user_roles(user_id, role_name);

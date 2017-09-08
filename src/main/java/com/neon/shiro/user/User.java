@@ -1,5 +1,5 @@
 
-package backend.user;
+package com.neon.shiro.user;
 
 import org.apache.shiro.crypto.hash.Sha256Hash;
 import org.apache.shiro.subject.Subject;
