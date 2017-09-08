@@ -4,8 +4,6 @@ import spark.Spark.get
 
 fun main(args: Array<String>) {
 
-
-
     // Multiline strings and string interpolation
     get("/multiline-interpolation-example") { req, res ->
         val name = "Alice"
@@ -15,8 +13,6 @@ fun main(args: Array<String>) {
             <p>Your email is $email</p>
         """
     }
-
-
 
     // Default arguments
     fun serverError(code: Int = 500, message: String = "Internal server error"): String {
@@ -33,8 +29,6 @@ fun main(args: Array<String>) {
     get("/not-implemented") { req, res ->
         serverError(code = 501, message = "Not implemented");
     }
-
-
 
     // When expression
     get("/when-example") { req, res ->

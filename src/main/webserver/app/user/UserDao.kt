@@ -35,5 +35,4 @@ class UserDao {
     fun delete(id: Int) {
         users.remove(id)
     }
-
 }
